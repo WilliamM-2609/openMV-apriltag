@@ -2,7 +2,7 @@
 import sensor
 import math
 
-
+print()
 
 cam_width = sensor.width() #replace with the resolution height
 cam_height = sensor.height() #replace with the resolution width
@@ -21,9 +21,9 @@ while True:
 
         AT_X = ((cam_width/2)-tag.cx)/(cam_width/200)
         AT_Y = ((cam_height/2)-tag.cy)/(cam_height/200)
-        AT_Z = -1*(tag.z_translation)
-        print_args = (tag.id, AT_X, AT_Y, AT_Z*10)
-        print(f"ID: %s, relative x: %g, relative y: %g relative z(cm): %f" % print_args)
+        AT_Z = -10*(tag.z_translation)
+        print_args = (tag.id, AT_X, AT_Y, AT_Z)
+        print(f"ID: %s, relative x: %g, relative y: %g, relative z(cm): %f" % print_args)
 
     #%d = decimal(drops right of point)
     #%e = scientific notation
